@@ -1,0 +1,2 @@
+- No caso crescente o algoritmo foi mais rápido (utilizei o primeiro número do vetor como pivo em meu QuickSort)
+- No caso decrescente o algoritmo foi pior (justamente por causa da decição de utilizar o primeiro número do vetor como pivo)

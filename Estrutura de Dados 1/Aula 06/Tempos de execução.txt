@@ -1,0 +1,29 @@
+tamanho = 10
+(BubbleSort): 0.00
+(SelectionSort): 0.00
+(InsertionSort): 0.00
+
+tamanho = 100
+(BubbleSort): 0.00
+(SelectionSort): 0.00
+(InsertionSort): 0.00
+
+tamanho = 1.000
+(BubbleSort): 0.00
+(SelectionSort): 0.00
+(InsertionSort): 0.00
+
+tamanho = 10.000
+(BubbleSort): 0.29
+(SelectionSort): 0.09
+(InsertionSort): 0.05
+
+tamanho = 100.000
+(BubbleSort): 30.62
+(SelectionSort): 8.73
+(InsertionSort): 4.96
+
+tamanho = 250.000
+(BubbleSort): 191.67
+(SelectionSort): 54.75
+(InsertionSort): 30.62
