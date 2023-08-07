@@ -1,0 +1,8 @@
+# ninja log v5
+3	82	6892881877689517	CMakeFiles/Aula_8.dir/min_heap.c.obj	7a63cd3a7bd1ffb1
+1	85	6892881877730767	CMakeFiles/Aula_8.dir/max_heap.c.obj	d6fa8378c4b099b0
+3	91	6892882208402808	Aula_8.exe	d03bef8ea9516a7a
+3	81	6892891490938578	CMakeFiles/Aula_8.dir/max_heap.c.obj	d6fa8378c4b099b0
+82	178	6892891491849597	Aula_8.exe	d03bef8ea9516a7a
+2	187	6898782519248931	CMakeFiles/Aula_8.dir/max_heap.c.obj	d6fa8378c4b099b0
+187	289	6898782520225211	Aula_8.exe	d03bef8ea9516a7a

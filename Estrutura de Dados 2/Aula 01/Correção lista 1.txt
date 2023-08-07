@@ -1,0 +1,93 @@
+// Pré-ordem(R,E,D): a,b,d,c,e,f
+void printPreOrdem(Arvore *a)
+{
+    if (!verifica_arv_vazia(a))
+    {
+        printf("%c", a->info);
+        if (!verifica_arv_vazia(a->esq))
+        {
+            printPreOrdem(a->esq);
+        }
+        printPreOrdem(a->dir);
+    }
+}
+
+//========= Exercício 2 - in-ordem ====
+// In-ordem(E,R,D): b,d,a,e,c,f
+void printInOrdem(Arvore *a)
+{
+    if (!verifica_arv_vazia(a))
+    {
+        if (!verifica_arv_vazia(a->esq))
+        {
+            printInOrdem(a->esq);
+        }
+        printf("%c ", a->info);
+        printInOrdem(a->dir);
+    }
+}
+
+//========= Exercício 2 - pós-ordem ====
+// Pós-ordem(E,D,R): d,b,e,f,c,a
+void printPosOrdem(Arvore *a)
+{
+    if (!verifica_arv_vazia(a))
+    {
+        if (!verifica_arv_vazia(a->esq))
+        {
+            printPosOrdem(a->esq);
+        }
+        printPosOrdem(a->dir);
+        printf("%c ", a->info);
+    }
+}
+
+
+//Exercício 3
+int pertence_arv(Arvore* arv, char char_input)
+{
+	if (arv != nullptr)
+	{
+		if (arv->caractere == char_input)
+			return(1);
+		else
+			return(pertence_arv(arv->esq, char_input) + pertence_arv(arv->dir, char_input));
+	}
+	else
+		return(0);
+}
+//exe 4
+
+int conta_nos(Arvore *a)
+{
+    if(verifica_arv_vazia(a))
+        return 0;
+    return 1 + conta_nos(a->esq) + conta_nos(a->dir);
+}
+
+//Ex 5
+
+#define MAX(a,b) (((a)>=(b))?(a):(b))
+
+int conta_altura_arvore (Arvore *a){
+   if(!verifica_arv_vazia(a)){
+      return 1 + MAX(conta_altura_arvore(a->esq), 
+                     conta_altura_arvore(a->dir));
+   }
+   return -1;
+}
+
+//========= Exercício 6 - conta folhas ====
+
+int conta_nos_folha (Arvore *a) {
+  
+  if (a != NULL) {
+    if (a->esq == NULL && a->dir == NULL) {
+      return 1;
+    }
+    else {
+      return conta_nos_folha(a->dir) + conta_nos_folha(a->esq);
+    }
+  }
+  return 0;
+}

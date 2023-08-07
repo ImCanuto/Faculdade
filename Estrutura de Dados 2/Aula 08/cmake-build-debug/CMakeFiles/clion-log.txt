@@ -1,0 +1,4 @@
+C:\Users\samue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/samue/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/bin/ninja/win/ninja.exe -G Ninja -S "C:\Users\samue\OneDrive\Facul\Estrutura de Dados 2\Aula 8" -B "C:\Users\samue\OneDrive\Facul\Estrutura de Dados 2\Aula 8\cmake-build-debug"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/samue/OneDrive/Facul/Estrutura de Dados 2/Aula 8/cmake-build-debug

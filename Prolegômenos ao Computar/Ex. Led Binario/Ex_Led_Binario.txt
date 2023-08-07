@@ -1,0 +1,99 @@
+int i, j, numero, soma, iniciar = 1;
+String texto = ""; // cria uma string vazia
+
+void setup() 
+{
+  pinMode(6, OUTPUT);
+  pinMode(7, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(10, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(13, OUTPUT);
+  
+  Serial.begin(9600);
+}
+
+int dec2bin(int numero)
+{
+   int sobra, i = 1, bin = 0;
+
+   while(numero != 0)
+   {
+   sobra = numero % 2;
+   bin += (sobra * i);
+   numero /= 2;
+   i *= 10;
+   }
+   return bin;
+}
+
+
+void loop()
+{ 
+  /* lendo caracteres ASCII no monitor serial, acumulando-os
+	 na string texto e depois convertendo a string para um
+     numero inteiro. */
+  
+  if(iniciar == 1)
+  {
+  	Serial.println("Numero decimal a converter para binario terminando com a letra d (exemplo: 123d):");
+    iniciar = 0;
+    soma = 0;
+    i = 7;
+  }
+  
+  if(Serial.available() > 0) // se foi digitado algo no monitor
+  {
+    char caractere = Serial.read();
+    if(isDigit(caractere)) // o caractere é um dígito?
+    {
+      texto += caractere; // mesmo que texto = texto + caractere
+      Serial.println(texto);
+    }
+    if(caractere == 'd')
+    {
+  	  numero = texto.toInt(); // função para converter texto para inteiro decimal
+      Serial.println("Numero decimal = ");
+      Serial.println(numero);
+      texto = "";
+      iniciar = 1;
+      
+      
+      int numBi = dec2bin(numero);
+      Serial.println(numBi);
+
+      int ledBin [7];
+      
+      
+      ledBin[7] = numBi/10000000;
+      ledBin[6] = numBi%10000000/1000000;
+      ledBin[5] = numBi%10000000%1000000/100000;
+      ledBin[4] = numBi%10000000%1000000%100000/10000;
+      
+      ledBin[3] = numBi%10000000%1000000%100000%10000/1000;
+      ledBin[2] = numBi%10000000%1000000%100000%10000%1000/100;
+      ledBin[1] = numBi%10000000%1000000%100000%10000%1000%100/10;
+      ledBin[0] = numBi%10000000%1000000%100000%10000%1000%100%10;
+      
+      
+      j = 6;
+
+      for(i=0 ; i < 8 ; i++)
+      {
+        if(ledBin[i] == 0)
+        	digitalWrite (j, LOW);
+        else
+        {
+        	digitalWrite (j, HIGH);
+        }
+        j++;
+
+      }
+      delay(1000);
+ 
+    }
+  }
+
+}

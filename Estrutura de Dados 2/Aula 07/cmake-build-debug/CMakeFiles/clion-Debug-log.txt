@@ -1,0 +1,10 @@
+C:\Users\samue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8617.54\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/samue/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/ninja/win/x64/ninja.exe -G Ninja -S "C:\Users\samue\OneDrive\Facul\Estrutura de Dados 2\Aula 7" -B "C:\Users\samue\OneDrive\Facul\Estrutura de Dados 2\Aula 7\cmake-build-debug"
+-- The C compiler identification is GNU 11.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Users/samue/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/samue/OneDrive/Facul/Estrutura de Dados 2/Aula 7/cmake-build-debug

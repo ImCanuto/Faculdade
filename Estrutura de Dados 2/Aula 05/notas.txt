@@ -1,0 +1,5 @@
+- Em uma árvore B, NECESSÁRIAMENTE todas as folhas estarão no último nível
+- Min_Chaves = t-1
+- Max_Chaves = t+1
+- Min_Filhos = t
+- Max_Filhos = 2t

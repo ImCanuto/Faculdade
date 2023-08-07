@@ -1,0 +1,2 @@
+C:/Users/samue/OneDrive/Facul/Estrutura de Dados 2/Aula 10/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/samue/OneDrive/Facul/Estrutura de Dados 2/Aula 10/cmake-build-debug/CMakeFiles/rebuild_cache.dir
